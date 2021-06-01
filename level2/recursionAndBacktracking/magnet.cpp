@@ -1,3 +1,19 @@
+// TLE for
+// 6 8
+// TTTLRLRT
+// BBBLRLRB
+// TLRTLRTT
+// BLRBLRBB
+// LRLRTTLR
+// LRLRBBLR
+// -1 2 2 -1 3 -1 -1 -1
+// -1 -1 2 -1 -1 1
+// 2 -1 -1 -1 2 -1
+// -1 1 2 -1 2 -1 -1 -1
+
+
+// need to add check for posrow and all beforehand and print if all value 0 or -1. 
+
 #include<bits/stdc++.h>
 using namespace std;
 void printbox(vector<vector<char>> box){
@@ -47,24 +63,6 @@ bool satisfycond(vector<vector<char>> &box, vector<int> poscol,vector<int> posro
             }
         }
     } 
-    // for(auto x : pcol){
-    //     cout<<x<<" ";
-    // }
-    // cout<<endl;
-    // for(auto x : prow){
-    //     cout<<x<<" ";
-    // }
-    // cout<<endl;
-    // for(auto x : nrow){
-    //     cout<<x<<" ";
-    // }
-    // cout<<endl;
-    // for(auto x : ncol){
-    //     cout<<x<<" ";
-    // }
-    // cout<<endl;
-    // cout<<endl;
-
     for(int i=0;i<box.size();i++){
         if(posrow[i]!=-1){
             if(prow[i]!=posrow[i]){
