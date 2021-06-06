@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-void combination2(vector<int> &box, int ci, int num, int li){
+void combination2(vector<char> &box, int ci, int num, int li){
     if(ci>num){
         for(auto x:box){
             cout<<x;
@@ -9,15 +9,15 @@ void combination2(vector<int> &box, int ci, int num, int li){
         return ;
     }
     for(int i=li+1;i<box.size();i++){
-        box[i]=ci;
+        box[i]='i';
         combination2(box,ci+1,num,i);
-        box[i]=0;
+        box[i]='-';
     }
 }
 int main(){
     int boxes, num;
     cin>>boxes>>num;
-    vector<int> box(boxes, 0);
+    vector<char> box(boxes, '-');
     combination2(box,1,num,-1);
     return 0;
 }
