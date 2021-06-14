@@ -9,17 +9,17 @@ void displayy(vector<vector<char>> box){
     }
     cout<<endl;
 }
-void combination2d(int cq,vector<vector<char>> box, int tq, int x, int y){
+void combination2d(int cq,vector<vector<char>> &box, int tq, int li, int lj){
     if(cq==tq){
         displayy(box);
         return ;
     }
-    for(int col=y+1;col<box[0].size();col++){
-        box[x][col]='q';
-        combination2d(cq+1,box,tq,x,col);
-        box[x][col]='-';
+    for(int col=lj+1;col<box[0].size();col++){
+        box[li][col]='q';
+        combination2d(cq+1,box,tq,li,col);
+        box[li][col]='-';
     }
-    for(int row=x+1;row<box.size();row++){
+    for(int row=li+1;row<box.size();row++){
         for(int col=0;col<box[0].size();col++){
             box[row][col]='q';
             combination2d(cq+1,box,tq,row,col);
