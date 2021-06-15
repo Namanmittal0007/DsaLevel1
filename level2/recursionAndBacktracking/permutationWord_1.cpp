@@ -29,7 +29,6 @@ int main(){
             charcount[c]++;
         }
     }
-
     wordpermute(charcount,charseq,s,"");
     return 0;
 }
